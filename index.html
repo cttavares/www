@@ -3,22 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Carlos Eduardo Tavares</title>
+    <title>Carlos Eduardo Tavares personal webpage</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 0;
             padding: 0;
             background-color: #f4f4f9;
             color: #333;
         }
+
         header {
             background: #333;
             color: #fff;
             padding: 10px 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header-title {
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-nav {
+            background: #444;
+            padding: 10px 0;
+        }
+
+        .top-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .top-nav ul li {
+            position: relative;
+            margin: 0 15px;
+        }
+
+        .top-nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 12px;
+            display: block;
+        }
+
+        .top-nav ul li a:hover {
+            background: #007BFF;
+            border-radius: 4px;
+        }
+
+        .top-nav ul li ul {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background: #444;
+            display: none;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .top-nav ul li:hover ul {
+            display: block;
+        }
+
+        .top-nav ul li ul li {
+            margin: 0;
+        }
+
+        .top-nav ul li ul li a {
+            padding: 10px 20px;
+        }
+
+        .container {
+            display: flex; /* Align sidebar and main content horizontally */
+            margin: 0 auto;
+            max-width: 1200px; /* Center the container and restrict its width */
+            padding: 20px;
+        }
+
+        nav.sidebar {
+            background: #444;
+            color: white;
+            width: 220px;
+            padding: 20px 10px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav.sidebar img {
+            display: block;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .social-icons {
+            margin-top: 20px;
             text-align: center;
         }
+
+        .social-icons a {
+            margin: 10px;
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: #007BFF;
+        }
+
+        main {
+            flex: 1; /* Ensures the main content takes up the remaining space */
+            margin-left: 20px; /* Adds space between sidebar and content */
+        }
+
         section {
             max-width: 800px;
             margin: 20px auto;
@@ -27,54 +135,85 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
         h1, h2 {
             color: #333;
         }
+
         a {
             color: #007BFF;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
     </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Carlos Eduardo Tavares</h1>
-        <p>Researcher in Quantum Computing and Programming Languages</p>
+        <h1 class="header-title">Carlos Eduardo Tavares</h1>
     </header>
-    <section>
-        <h2>About Me</h2>
-        <p>
-            I hold a Ph.D. in Computer Science from a consortium of the Universities of Minho, Porto, and Aveiro,
-            with my thesis titled <em>"Foundations for Quantum Algorithms and Complexity"</em>. My research focuses
-            on quantum computing, particularly the syntactic and semantic aspects of quantum programming languages
-            and implicit complexity theory.
-        </p>
-        <h2>Research Interests</h2>
+    <div class="top-nav">
         <ul>
-            <li>Quantum Computing and Algorithms</li>
-            <li>Programming Languages (Syntactic and Semantic Foundations)</li>
-            <li>Implicit Complexity Theory</li>
-            <li>Applications of Quantum Computing in Machine Learning</li>
-            <li>Formal Methods and Program Certification</li>
+            <li><a href="#about">About Me</a></li>
+            <li>
+                <a href="#content">Public Content</a>
+                <ul>
+                    <li><a href="#quantum">Quantum</a></li>
+                    <li><a href="#programming">Programming</a></li>
+                </ul>
+            </li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-        <h2>Recent Work</h2>
-        <p>
-            I have worked on quantum hardware using linear optics, exploring its applications in optimization
-            and machine learning. My current focus includes certifying quantum algorithms using tools like
-            the ZX-calculus and Lov-Calculus, and analyzing their applicability to real-world problems.
-        </p>
-        <h2>Contact</h2>
-        <p>
-            Feel free to reach out to me for collaborations or inquiries:
-        </p>
-        <ul>
-            <li>Email: <a href="mailto:carlos.tavares@example.com">carlos.tavares@example.com</a></li>
-            <li>LinkedIn: <a href="https://linkedin.com/in/carlostavares" target="_blank">linkedin.com/in/carlostavares</a></li>
-        </ul>
-    </section>
+    </div>
+    <div class="container">
+        <nav class="sidebar">
+            <img src="profile-picture.jpg" alt="Profile Picture">
+            <div class="social-icons">
+                <a href="https://linkedin.com/in/tavarescarlos" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/cttavares" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+            </div>
+        </nav>
+        <main>
+            <section id="about">
+                <h2>About Me</h2>
+                <p>
+                    Hi! Welcome to my personal web page. I am a researcher in computer science, an IT professional, and an (invited) auxiliary professor at the University of Minho.
+                </p>
+                <p>
+                    I hold a Ph.D. in Computer Science on quantum algorithms and their applications. In recent years, my research has focused on quantum computational models based on optics. I am deeply interested in various topics surrounding computation and computational models, particularly quantum computing, quantum algorithms, and the physical phenomena that enable quantum advantage.
+                </p>
+                <p>
+                    Aside from quantum computing, I have a strong background in programming and software engineering.
+                    You can find a detailed CV of my activities <a href="#">here</a> and a summarized version <a href="#">here</a>.
+                </p>
+            </section>
+            <section id="content">
+                <h2>Public Content</h2>
+                <h3 id="quantum">Quantum</h3>
+                <p>
+                    I have taught several university courses and workshops in quantum computing. Here are the contents of a three-hour seminar on quantum computing fundamentals and its applications: <a href="#">here</a>.
+                </p>
+                <h3 id="programming">Programming</h3>
+                <p>
+                    I am the course coordinator for the "Programming and Algorithms" course. Here you can find all the course contents, exercises, and solutions.
+                </p>
+            </section>
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>
+                    Feel free to reach out to me for collaborations or inquiries:
+                </p>
+                <ul>
+                    <li>LinkedIn: <a href="https://linkedin.com/in/tavarescarlos" target="_blank">linkedin.com/in/tavarescarlos</a></li>
+                    <li>GitHub: <a href="https://github.com/cttavares" target="_blank">github.com/cttavares</a></li>
+                    <li>Google Scholar: <a href="#" target="_blank">yourwebsite.com</a></li>
+                </ul>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
-
